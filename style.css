@@ -1,0 +1,104 @@
+/* ===== Estilo base (desktop) ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #222;
+    color: #e50914;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Seções dos filmes */
+.movie-ranking {
+    border-bottom: 1px solid #444;
+    padding: 20px;
+}
+
+.movie-poster {
+    max-width: 200px;
+    border-radius: 8px;
+}
+
+/* ===== Responsividade para celular ===== */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .movie-ranking {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .ranking-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movie-poster {
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .locadora-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .action-btn {
+        width: 100%;
+        max-width: 250px;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        background: #e50914;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .action-btn:hover {
+        background: #ff1c1f;
+    }
+}

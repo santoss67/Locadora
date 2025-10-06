@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Top 3 Filmes - A Locadora Pessoal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        header .logo h1 {
+            margin: 0;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .main-nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #main-container {
+            padding: 20px;
+        }
+
+        .movie-ranking {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+
+        .movie-poster {
+            width: 100%;
+            max-width: 300px;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .locadora-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .action-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .action-btn:hover {
+            background-color: #555;
+        }
+
+        .trailer-btn {
+            background-color: #d35400;
+        }
+
+        .trailer-btn:hover {
+            background-color: #e67e22;
+        }
+
+        .status-locacao {
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        .site-footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .locadora-actions {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .movie-poster {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header id="header">
+    <div class="logo">
+        <h1>Locadora</h1>
+    </div>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Saiba Mais</a></li>
+            <li><a href="#contact">Contato</a></li>
+            <li><a href="#share">Compartilhar</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div id="main-container">
+    <main id="main-content">
+        <h2>O Meu Ranking Pessoal: A Locadora de Filmes Favoritos</h2>
+        <p>Role para ver os 3 filmes e clique em "Emprestar", "Vender" ou "Assistir Trailer".</p>
+
+        <!-- FILME 1 -->
+        <section class="movie-ranking" id="filme1">
+            <h3>Invocação Do Mal (2013) </h3>
+            <span>1º Lugar</span>
+            <p>Filme de terror impecável, sem defeitos</p>
+            <img src="invocacao.png" alt="Poster do Filme 1" class="movie-poster">
+            <div class="locadora-actions">
+                <button class="action-btn" onclick="simularLocacao('filme1','Emprestar')">Emprestar (R$5,00)</button>
+                <button class="action-btn" onclick="simularLocacao('filme1','Vender')">Vender (R$30,00)</button>
+                <a href="https://www.youtube.com/watch?v=k10ETZ41q5o" target="_blank" rel="noopener noreferrer" class="action-btn trailer-btn">Assistir Trailer</a>
+                <p class="status-locacao" id="status-filme1">Disponível para locação.</p>
+            </div>
+        </section>
+
+        <!-- FILME 2 - Pânico (1996) -->
+<section class="movie-ranking" id="filme2">
+    <h3>Pânico (1996)</h3>
+    <span>2º Lugar</span>
+    <p>Suspense clássico dos anos 90...</p>
+    <img src="panico.png" alt="Poster do Filme 2" class="movie-poster">
+    <div class="locadora-actions">
+        <button class="action-btn" onclick="simularLocacao('filme2','Emprestar')">Emprestar (R$5,00)</button>
+        <button class="action-btn" onclick="simularLocacao('filme2','Vender')">Vender (R$30,00)</button>
+        <a href="https://www.youtube.com/watch?v=AXf9sFiUEgA" target="_blank" rel="noopener noreferrer" class="action-btn trailer-btn">Assistir Trailer</a>
+        <p class="status-locacao" id="status-filme2">Disponível para locação.</p>
+    </div>
+</section>
+
+<!-- FILME 20 - Demon Slayer - Castelo Infinito -->
+<section class="movie-ranking" id="filme20">
+    <h3>Demon Slayer - Castelo Infinito</h3>
+    <span>20º Lugar</span>
+    <p>Que filme MARAVILHOSO!!!...</p>
+    <img src="demon.png" alt="Poster do Filme 20" class="movie-poster">
+    <div class="locadora-actions">
+        <button class="action-btn" onclick="simularLocacao('filme20','Emprestar')">Emprestar (R$5,00)</button>
+        <button class="action-btn" onclick="simularLocacao('filme20','Vender')">Vender (R$30,00)</button>
+        <a href="https://www.youtube.com/watch?v=VQ8zR1yF3YM" target="_blank" rel="noopener noreferrer" class="action-btn trailer-btn">Assistir Trailer</a>
+        <p class="status-locacao" id="status-filme20">Disponível para locação.</p>
+    </div>
+</section>
+
+
+        <footer class="site-footer">
+            <p>&copy; 2025 Ranking Pessoal de Filmes. Todos os direitos reservados.</p>
+        </footer>
+
+        <script>
+            function simularLocacao(filmeId, acao) {
+                const status = document.getElementById('status-' + filmeId);
+                if (acao === 'Emprestar') status.textContent = 'Filme emprestado!';
+                if (acao === 'Vender') status.textContent = 'Filme vendido!';
+            }
+        </script>
+
+    </main>
+</div>
+
+</body>
+</html>
